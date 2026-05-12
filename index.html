@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="InfraTrack - Plataforma IoT de monitoreo inteligente para maquinaria pesada y flotas del sector ferretero y construcción.">
+    <title>InfraTrack</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Imagenes/logo_infratrack-sinfondo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Top Header Bar (Minimalist) -->
+    <div class="top-header-new d-none d-lg-block">
+        <div class="container d-flex justify-content-between align-items-center h-100">
+            <div class="contact-links">
+                <span class="me-4"><i class="bi bi-telephone text-orange me-2"></i> +51 987 654 321</span>
+                <span><i class="bi bi-envelope text-orange me-2"></i> contacto@infratrack.pe</span>
+            </div>
+            <div class="social-links-top">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+                <span class="ms-4 opacity-75 small"><i class="bi bi-globe me-1"></i> ESPAÑOL</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 1: Navbar (Clean) -->
+    <nav class="navbar navbar-expand-lg navbar-new shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="Imagenes/logo_infratrack-sinfondo.png" alt="InfraTrack Logo" height="42" class="me-2">
+                <span class="fw-bold fs-4">Infra<span class="text-orange">Track</span></span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list fs-1 text-orange"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto me-lg-5">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tecnologia">Tecnología</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sectores">Sectores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+                </ul>
+                <a href="#contacto" class="btn btn-orange-rounded shadow-sm">Contáctanos</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 2: Hero Section -->
+    <header id="inicio" class="hero-section">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="row justify-content-center w-100">
+                <div class="col-lg-12">
+                    <span id="typing-tagline" class="hero-tagline"></span>
+                    <h1 id="typing-title" class="hero-title"></h1>
+
+                    <div class="hero-separator"></div>
+
+                    <p id="typing-desc" class="hero-subtitle"></p>
+
+                    <div class="d-flex justify-content-center mt-5">
+                        <a href="#contacto" id="hero-cta" class="btn btn-hero"
+                            style="opacity: 0; transform: translateY(20px); transition: all 0.8s ease;">
+                            <i class="bi bi-arrow-down-right-circle"></i> Contáctanos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Section 3: Floating Feature Cards (Image 2 Redesign) -->
+    <section id="problema" class="floating-cards-wrapper grid-pattern-bg">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="floating-card-horizontal reveal-card">
+                        <div class="floating-icon-box"><i class="bi bi-fuel-pump"></i></div>
+                        <div class="floating-card-content">
+                            <h4>Combustible en tiempo real</h4>
+                            <p>Detecta caídas bruscas y evita pérdidas no autorizadas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="floating-card-horizontal reveal-card">
+                        <div class="floating-icon-box"><i class="bi bi-geo-alt"></i></div>
+                        <div class="floating-card-content">
+                            <h4>Trazabilidad GPS</h4>
+                            <p>Supervisa ubicación, rutas y tiempos de ralentí por unidad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="floating-card-horizontal reveal-card">
+                        <div class="floating-icon-box"><i class="bi bi-tools"></i></div>
+                        <div class="floating-card-content">
+                            <h4>Activa tu monitoreo</h4>
+                            <p>Digitaliza combustible, GPS y mantenimiento en pocos pasos.</p>
+                            <a href="#contacto" class="floating-card-cta">Solicitar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Sobre Nosotros (Redesigned) -->
+    <section id="nosotros" class="bg-white overflow-hidden grid-pattern-bg">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal-left">
+                    <div class="about-collage">
+                        <img src="Imagenes/nosotros_1.png" alt="InfraTrack en campo" class="about-collage-main">
+                        <img src="Imagenes/nosotros_2.png" alt="Equipo InfraTrack trabajando" class="about-collage-secondary">
+                        <div class="about-stat-card">
+                            <div class="about-stat-number">25+</div>
+                            <div class="about-stat-text">nodos IoT<br>y pruebas de concepto</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 reveal-right">
+                    <div class="about-panel reveal-item">
+                        <span class="about-tagline mb-3">QUIÉNES SOMOS</span>
+                        <h2 class="about-title mb-4">Soluciones tecnológicas para el control de maquinaria y combustible</h2>
+                        <p class="about-description mb-4">
+                            <strong>InfraTrack</strong> es un equipo de estudiantes de Ingeniería de Software de la <strong>UPC</strong> que desarrolla soluciones open source para mejorar la trazabilidad y digitalizar la gestión de flotas en ferreterías y constructoras del Perú.
+                        </p>
+
+                        <div class="about-mission-grid mb-4">
+                            <div class="about-mission-card mission-card">
+                                <div class="about-mission-label"><i class="bi bi-bullseye me-2"></i>MISIÓN</div>
+                                <p>Diseñar una plataforma inteligente que integre combustible, GPS y mantenimiento en tiempo real.</p>
+                            </div>
+                            <div class="about-mission-card vision-card">
+                                <div class="about-mission-label vision"><i class="bi bi-eye me-2"></i>VISIÓN</div>
+                                <p>Ser una referencia latinoamericana en soluciones IoT open source para logística industrial.</p>
+                            </div>
+                        </div>
+
+                        <div class="about-legacy-tags mb-4">
+                            <span class="about-legacy-tag tag-yellow"><i class="bi bi-shield-check me-2"></i>Transparencia</span>
+                            <span class="about-legacy-tag tag-muted"><i class="bi bi-person-check me-2"></i>Responsabilidad</span>
+                            <span class="about-legacy-tag tag-yellow"><i class="bi bi-lightning-charge me-2"></i>Innovación</span>
+                            <span class="about-legacy-tag tag-muted"><i class="bi bi-people me-2"></i>Compromiso</span>
+                        </div>
+
+                        <div class="about-benefits-row mb-4">
+                            <div class="about-benefit-item"><i class="bi bi-check-circle text-orange me-2"></i>Datos reales</div>
+                            <div class="about-benefit-item"><i class="bi bi-check-circle text-orange me-2"></i>Menos pérdidas</div>
+                            <div class="about-benefit-item"><i class="bi bi-check-circle text-orange me-2"></i>Obras remotas</div>
+                        </div>
+
+                        <div class="about-team-card">
+                            <div class="about-team-avatar">TT</div>
+                            <div>
+                                <h6 class="fw-bold mb-1">TechTitans</h6>
+                                <p class="mb-0">Estudiantes UPC · Desarrollo de Software</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: IoT Technology (New Centered Layout) -->
+    <section id="tecnologia" class="bg-light overflow-hidden">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <div class="bg-text-watermark reveal-watermark">MONITOREO 360</div>
+                <span class="text-orange fw-bold text-uppercase letter-spacing-2 reveal-item">Monitoreo 360°</span>
+                <h2 class="display-5 fw-bold mt-2 reveal-item">Tecnología Inteligente</h2>
+                <p class="text-muted mx-auto reveal-item" style="max-width: 700px;">
+                    Integramos hardware IoT y software de analítica para medir combustible, ubicación GPS, horas de uso
+                    y alertas operativas en una sola plataforma web.
+                </p>
+            </div>
+
+            <div class="row g-4 mb-5 tech-panels-grid">
+                <div class="col-12 col-lg-6">
+                    <div class="tech-feature-card shadow-sm reveal-item">
+                        <div class="tech-icon-circle"><i class="bi bi-fuel-pump-fill"></i></div>
+                        <div class="tech-feature-copy">
+                            <h4>Nivel de combustible</h4>
+                            <p class="text-muted small">Monitoreo continuo para detectar mermas y eventos sospechosos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="tech-feature-card shadow-sm reveal-item">
+                        <div class="tech-icon-circle"><i class="bi bi-pin-map-fill"></i></div>
+                        <div class="tech-feature-copy">
+                            <h4>Ubicación GPS</h4>
+                            <p class="text-muted small">Seguimiento satelital para control de rutas y productividad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="tech-feature-card shadow-sm reveal-item">
+                        <div class="tech-icon-circle"><i class="bi bi-speedometer2"></i></div>
+                        <div class="tech-feature-copy">
+                            <h4>Ralentí y uso</h4>
+                            <p class="text-muted small">Identificación de horas improductivas para optimizar costos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="tech-feature-card shadow-sm reveal-item">
+                        <div class="tech-icon-circle"><i class="bi bi-bell-fill"></i></div>
+                        <div class="tech-feature-copy">
+                            <h4>Alertas críticas</h4>
+                            <p class="text-muted small">Notificaciones automáticas para actuar antes de una falla operativa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- InfraTrack Operations Showcase -->
+            <div class="ops-showcase-panel reveal-item">
+                <div class="ops-showcase-header">
+                    <p class="ops-kicker mb-2"><i class="bi bi-broadcast-pin me-2"></i>CENTRO DE OPERACIONES INFRATRACK</p>
+                    <h3 class="fw-bold text-dark mb-2">Control operativo de obra en tiempo real</h3>
+                    <p class="text-muted small mb-0">Vista simple con tres partes: indicadores de hoy, alertas y resumen final.</p>
+                </div>
+
+                <div class="row g-3 align-items-start mt-1">
+                    <div class="col-12 col-xl-7">
+                        <p class="ops-subtitle"><span>1</span> Indicadores de hoy</p>
+                        <div class="ops-kpi-grid">
+                            <article class="ops-kpi-card kpi-fuel">
+                                <span class="ops-kpi-icon icon-fuel"><i class="bi bi-fuel-pump-fill"></i></span>
+                                <div class="ops-kpi-content">
+                                    <span class="ops-kpi-title">Combustible</span>
+                                    <h2 id="iot-temp" class="ops-kpi-value">74.0</h2>
+                                    <p class="ops-kpi-meta">Porcentaje útil del tanque</p>
+                                </div>
+                                <div class="ops-kpi-side">
+                                    <span>Meta</span>
+                                    <strong>70-80%</strong>
+                                </div>
+                            </article>
+
+                            <article class="ops-kpi-card kpi-gps">
+                                <span class="ops-kpi-icon icon-gps"><i class="bi bi-geo-alt-fill"></i></span>
+                                <div class="ops-kpi-content">
+                                    <span class="ops-kpi-title">GPS</span>
+                                    <h2 id="iot-humidity" class="ops-kpi-value">96.2</h2>
+                                    <p class="ops-kpi-meta">Ubicación y ruta activas</p>
+                                </div>
+                                <div class="ops-kpi-side">
+                                    <span>Meta</span>
+                                    <strong>&gt; 95%</strong>
+                                </div>
+                            </article>
+
+                            <article class="ops-kpi-card kpi-engine">
+                                <span class="ops-kpi-icon icon-engine"><i class="bi bi-gear-wide-connected"></i></span>
+                                <div class="ops-kpi-content">
+                                    <span class="ops-kpi-title">Motor</span>
+                                    <h2 id="iot-light" class="ops-kpi-value">312</h2>
+                                    <p class="ops-kpi-meta">Horas acumuladas</p>
+                                </div>
+                                <div class="ops-kpi-side">
+                                    <span>Servicio</span>
+                                    <strong>108 h</strong>
+                                </div>
+                            </article>
+
+                            <article class="ops-kpi-card kpi-roi">
+                                <span class="ops-kpi-icon icon-roi"><i class="bi bi-graph-up-arrow"></i></span>
+                                <div class="ops-kpi-content">
+                                    <span class="ops-kpi-title">Ahorro</span>
+                                    <h2 class="ops-kpi-value">18%</h2>
+                                    <p class="ops-kpi-meta">Mejora estimada del mes</p>
+                                </div>
+                                <div class="ops-kpi-side">
+                                    <span>Impacto</span>
+                                    <strong>Alto</strong>
+                                </div>
+                            </article>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 col-xl-5">
+                        <p class="ops-subtitle"><span>2</span> Alertas de hoy</p>
+                        <div class="ops-side-card mb-3">
+                            <h5 class="ops-side-title"><i class="bi bi-lightning-charge-fill me-2"></i>Eventos recientes</h5>
+                            <ul class="ops-event-list">
+                                <li>
+                                    <span class="event-time">09:42</span>
+                                    <p>Unidad IT-07 en ralentí por 18 min.</p>
+                                </li>
+                                <li>
+                                    <span class="event-time">09:37</span>
+                                    <p>Reabastecimiento validado: +120L.</p>
+                                </li>
+                                <li>
+                                    <span class="event-time">09:31</span>
+                                    <p>Desvío de ruta detectado y corregido.</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="ops-side-card">
+                            <h5 class="ops-side-title"><i class="bi bi-diagram-3-fill me-2"></i>Estado de unidades</h5>
+                            <div class="ops-asset-row">
+                                <span>Operativos</span>
+                                <strong>32</strong>
+                            </div>
+                            <div class="ops-asset-row">
+                                <span>En mantenimiento</span>
+                                <strong>6</strong>
+                            </div>
+                            <div class="ops-asset-row">
+                                <span>En inspección</span>
+                                <strong>4</strong>
+                            </div>
+                            <div class="ops-side-foot">Última sincronización: hace 2 min</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ops-daily-summary">
+                    <p class="ops-subtitle ops-subtitle-bottom"><span>3</span> Resultado del día</p>
+                    <div class="ops-impact-row">
+                        <div class="ops-impact-pill">
+                            <i class="bi bi-activity"></i>
+                            <span>Alertas: 3</span>
+                        </div>
+                        <div class="ops-impact-pill">
+                            <i class="bi bi-truck-front"></i>
+                            <span>Flota activa: 42</span>
+                        </div>
+                        <div class="ops-impact-pill">
+                            <i class="bi bi-clock-history"></i>
+                            <span>Retorno: &lt; 6 meses</span>
+                        </div>
+                        <div class="ops-impact-pill">
+                            <i class="bi bi-tools"></i>
+                            <span>Mantenimiento: 6</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-5 pt-4 reveal-item">
+                <p class="text-muted mb-4 mx-auto" style="max-width: 800px;">
+                    InfraTrack digitaliza inventarios móviles y operaciones descentralizadas con un enfoque de bajo
+                    costo, alto impacto y decisiones estratégicas basadas en evidencia real.
+                </p>
+                <a href="#contacto" class="btn btn-hero">Solicitar Demo Operativa</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Implementación Estratégica (Clean Cards) -->
+    <section id="sectores" class="bg-white grid-pattern-bg">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <div class="bg-text-watermark reveal-watermark">ALCANCE GLOBAL</div>
+                <span class="text-orange fw-bold text-uppercase letter-spacing-2 reveal-item">Alcance Global</span>
+                <h2 class="display-5 fw-bold mt-2 reveal-item">Implementación Estratégica</h2>
+                <p class="text-muted mx-auto reveal-item" style="max-width: 650px;">
+                    InfraTrack se adapta a operaciones reales: obras remotas, ferreterías industriales y gestores de
+                    flota que necesitan control total sin licencias costosas.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Card 1: Logística Industrial -->
+                <div class="col-lg-4">
+                    <div class="sector-card-premium reveal-zoom">
+                        <div class="sector-img-wrapper">
+                            <img src="Imagenes/card-1.jpeg"
+                                class="sector-img" alt="Almacenes Logísticos">
+                            <div class="sector-badge orange">
+                                <i class="bi bi-building"></i> Control patrimonial
+                            </div>
+                        </div>
+                        <div class="sector-floating-icon">
+                            <i class="bi bi-briefcase"></i>
+                        </div>
+                        <div class="sector-content">
+                            <h3 class="sector-title">Dueños de ferreterías y constructoras</h3>
+                            <p class="sector-text">
+                                Enfoque financiero y estratégico para reducir pérdidas por combustible y mejorar el ROI
+                                del activo crítico.
+                            </p>
+                            <div class="sector-tags mb-4">
+                                <span class="tag">ROI</span>
+                                <span class="tag">Trazabilidad</span>
+                                <span class="tag">Rentabilidad</span>
+                            </div>
+                            <div class="sector-footer">
+                                <a href="#planes" class="sector-link">VER PLANES <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Hospitales Regionales -->
+                <div class="col-lg-4">
+                    <div class="sector-card-premium reveal-zoom">
+                        <div class="sector-img-wrapper">
+                            <img src="Imagenes/card-2.jpeg"
+                                class="sector-img" alt="Operaciones remotas">
+                            <div class="sector-badge blue">
+                                <i class="bi bi-geo"></i> Obras remotas
+                            </div>
+                        </div>
+                        <div class="sector-floating-icon">
+                            <i class="bi bi-truck"></i>
+                        </div>
+                        <div class="sector-content">
+                            <h3 class="sector-title">Administradores logísticos</h3>
+                            <p class="sector-text">
+                                Control táctico diario con datos de ubicación, uso y alertas para cumplir cronogramas
+                                sin gestión reactiva.
+                            </p>
+                            <div class="sector-tags mb-4">
+                                <span class="tag">GPS</span>
+                                <span class="tag">Alertas</span>
+                                <span class="tag">Mantenimiento</span>
+                            </div>
+                            <div class="sector-footer">
+                                <a href="#tecnologia" class="sector-link">VER DASHBOARD <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Eficiencia Operativa -->
+                <div class="col-lg-4">
+                    <div class="sector-card-premium reveal-zoom">
+                        <div class="sector-img-wrapper">
+                            <img src="Imagenes/card-3.jpeg"
+                                class="sector-img" alt="Eficiencia de operación">
+                            <div class="sector-badge green">
+                                <i class="bi bi-graph-up-arrow"></i> Mejora continua
+                            </div>
+                        </div>
+                        <div class="sector-floating-icon">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <div class="sector-content">
+                            <h3 class="sector-title">Operación escalable y sostenible</h3>
+                            <p class="sector-text">
+                                Plataforma open source para crecer con múltiples unidades y reducir ineficiencia
+                                energética y huella de carbono.
+                            </p>
+                            <div class="sector-tags mb-4">
+                                <span class="tag">Open Source</span>
+                                <span class="tag">Escalable</span>
+                                <span class="tag">Sostenible</span>
+                            </div>
+                            <div class="sector-footer">
+                                <a href="#contacto" class="sector-link">AGENDAR ASESORÍA <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Stats Counter (Inspired by Image 1) -->
+    <section class="stats-counter-section">
+        <div class="stats-overlay"></div>
+        <div class="container position-relative z-index-2">
+            <div class="row g-4 text-center">
+                <div class="col-6 col-lg-3">
+                    <div class="stat-item">
+                        <div class="stat-blob">
+                            <i class="bi bi-router-fill"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h2 class="stat-number">+<span class="counter" data-target="500">0</span></h2>
+                            <p class="stat-label">Nodos IoT en campo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="stat-item">
+                        <div class="stat-blob">
+                            <i class="bi bi-truck-front-fill"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h2 class="stat-number"><span class="counter" data-target="60">0</span></h2>
+                            <p class="stat-label">Flotas conectadas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="stat-item">
+                        <div class="stat-blob">
+                            <i class="bi bi-fuel-pump-diesel-fill"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h2 class="stat-number"><span class="counter" data-target="96">0</span>%</h2>
+                            <p class="stat-label">Control de consumo</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="stat-item">
+                        <div class="stat-blob">
+                            <i class="bi bi-broadcast-pin"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h2 class="stat-number">24/7</h2>
+                            <p class="stat-label">Telemetría continua</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Integrantes del Equipo (TechTitans) -->
+    <section id="equipo" class="team-techtitans-section">
+        <div class="container">
+            <header class="team-techtitans-header text-center">
+                <span class="team-techtitans-label reveal-item">TECHTITANS</span>
+                <h2 class="team-techtitans-title reveal-item">Integrantes del Equipo</h2>
+                <p class="team-techtitans-subtitle reveal-item mx-auto">
+                    Impulsamos la logística industrial mediante soluciones IoT precisas para el control de combustible y
+                    maquinaria.
+                </p>
+                <div class="team-techtitans-rule reveal-item" aria-hidden="true"></div>
+            </header>
+
+            <div class="row g-4 justify-content-center team-techtitans-row-top">
+                <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+                    <article class="team-member-card team-member-card--featured reveal-item">
+                        <div class="team-member-frame">
+                            <div class="team-member-photo">
+                                <img src="Imagenes/dhilsen.jpeg" alt="DHILSEN ARMIL MALLQUI VILCA">
+                            </div>
+                            <h3 class="team-member-name">DHILSEN ARMIL MALLQUI VILCA</h3>
+                        </div>
+                        <div class="team-member-accent-bar" aria-hidden="true"></div>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+                    <article class="team-member-card team-member-card--featured reveal-item">
+                        <div class="team-member-frame">
+                            <div class="team-member-photo">
+                                <img src="Imagenes/David.jpeg" alt="DAVID ALEJANDRO CALIXTO IRIARTE">
+                            </div>
+                            <h3 class="team-member-name">DAVID ALEJANDRO CALIXTO IRIARTE</h3>
+                        </div>
+                        <div class="team-member-accent-bar" aria-hidden="true"></div>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+                    <article class="team-member-card team-member-card--featured reveal-item">
+                        <div class="team-member-frame">
+                            <div class="team-member-photo">
+                                <img src="Imagenes/Jefferson.jpeg" alt="JEFFERSON BAYRON MORALES YAPUCHURA">
+                            </div>
+                            <h3 class="team-member-name">JEFFERSON BAYRON MORALES YAPUCHURA</h3>
+                        </div>
+                        <div class="team-member-accent-bar" aria-hidden="true"></div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center team-techtitans-row-bottom">
+                <div class="col-12 col-sm-6 col-lg-5 d-flex justify-content-center">
+                    <article class="team-member-card team-member-card--featured reveal-item">
+                        <div class="team-member-frame">
+                            <div class="team-member-photo">
+                                <img src="Imagenes/Aldair.jpeg" alt="ALDAIR JOAQUIN RAMOS AGUIRRE">
+                            </div>
+                            <h3 class="team-member-name">ALDAIR JOAQUIN RAMOS AGUIRRE</h3>
+                        </div>
+                        <div class="team-member-accent-bar" aria-hidden="true"></div>
+                    </article>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-5 d-flex justify-content-center">
+                    <article class="team-member-card team-member-card--featured reveal-item">
+                        <div class="team-member-frame">
+                            <div class="team-member-photo">
+                                <img src="Imagenes/WhatsApp Image 2026-04-19 at 8.10.07 PM.jpeg"
+                                    alt="CARLOS MARCELO MANSILLA RIVERO">
+                            </div>
+                            <h3 class="team-member-name">CARLOS MARCELO MANSILLA RIVERO</h3>
+                        </div>
+                        <div class="team-member-accent-bar" aria-hidden="true"></div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Subscription Plans (Redesigned - Premium Image Style) -->
+    <section id="planes" class="pricing-section-premium grid-pattern-bg">
+        <div class="container">
+            <div class="section-title text-center mb-5">
+                <div class="bg-text-watermark reveal-watermark">NUESTROS PLANES</div>
+                <span class="text-orange fw-bold text-uppercase letter-spacing-2 reveal-item">Inversión
+                    Inteligente</span>
+                <h2 class="display-5 fw-bold mt-2 reveal-item">Planes de Monitoreo</h2>
+                <p class="text-muted mx-auto mb-4 reveal-item" style="max-width: 650px;">
+                    Planes diseñados para reducir pérdidas de combustible, mejorar mantenimiento y escalar con control
+                    total de flota.
+                </p>
+            </div>
+
+            <div class="row g-4 align-items-stretch justify-content-center">
+                <!-- Plan 1: CORE -->
+                <div class="col-lg-4">
+                    <div class="pricing-card-white h-100 reveal-card">
+                        <div class="pricing-header">
+                            <span class="plan-name">BASE OBRA</span>
+                            <div class="plan-price">S/199<span class="price-period">/mes</span></div>
+                            <p class="plan-desc">Ideal para flotas pequeñas que inician digitalización operativa.</p>
+                        </div>
+                        <div class="pricing-divider"></div>
+                        <ul class="pricing-features">
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Hasta 5 unidades monitoreadas</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Alertas básicas de combustible</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Historial operativo de 90 días</li>
+                            <li class="inactive"><i class="bi bi-x-circle-fill"></i> API y exportación avanzada</li>
+                            <li class="inactive"><i class="bi bi-x-circle-fill"></i> Predicción de mantenimiento</li>
+                            <li class="inactive"><i class="bi bi-x-circle-fill"></i> Soporte prioritario</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <a href="#contacto" class="btn btn-outline-pricing">Seleccionar Base Obra</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan 2: BUSINESS (HIGHLIGHTED) -->
+                <div class="col-lg-4">
+                    <div class="pricing-card-white highlight reveal-card">
+                        <div class="recommended-badge">RECOMENDADO</div>
+                        <div class="pricing-header">
+                            <span class="plan-name orange-text">CONTROL PRO</span>
+                            <div class="plan-price">S/499<span class="price-period">/mes</span></div>
+                            <p class="plan-desc">Para gestores logísticos que necesitan visibilidad total y alertas críticas.
+                            </p>
+                        </div>
+                        <div class="pricing-divider"></div>
+                        <ul class="pricing-features">
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Hasta 25 unidades monitoreadas</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Alertas WhatsApp, email y SMS</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Historial y reportes anuales</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Dashboard táctico avanzado</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> API para integración ERP</li>
+                            <li class="inactive"><i class="bi bi-x-circle-fill"></i> Equipo on-site dedicado</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <a href="#contacto" class="btn btn-solid-pricing">Comenzar ahora <i
+                                    class="bi bi-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plan 3: ENTERPRISE -->
+                <div class="col-lg-4">
+                    <div class="pricing-card-white h-100 reveal-card">
+                        <div class="pricing-header">
+                            <span class="plan-name">ESCALA TOTAL</span>
+                            <div class="plan-price">Personalizado</div>
+                            <p class="plan-desc">Para corporativos con múltiples obras y operación descentralizada a
+                                nivel nacional.</p>
+                        </div>
+                        <div class="pricing-divider"></div>
+                        <ul class="pricing-features">
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Unidades y nodos ilimitados</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Integración total de datos</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Soporte técnico 24/7 dedicado</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Implementación y capacitación in-situ</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> SLA y tablero ejecutivo</li>
+                            <li class="active"><i class="bi bi-check-circle-fill"></i> Analítica estratégica para expansión</li>
+                        </ul>
+                        <div class="pricing-footer">
+                            <a href="#contacto" class="btn btn-outline-pricing">Contactar ventas <i
+                                    class="bi bi-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pricing-bottom-info text-center mt-5 reveal-item">
+                <p class="text-muted small"><i class="bi bi-shield-check text-orange me-2"></i> Todos los planes
+                    incluyen plataforma open source, trazabilidad en tiempo real y onboarding operativo</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Contact (Redesigned - Image 1) -->
+    <section id="contacto" class="contact-section-new grid-pattern-bg">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Left Side: Info -->
+                <div class="col-lg-6 reveal-left">
+                    <span class="text-orange fw-bold text-uppercase letter-spacing-2 reveal-item">Soporte
+                        Especializado</span>
+                    <h2 class="display-5 fw-bold mt-2 reveal-item">Habla con Expertos</h2>
+                    <p class="text-muted mt-3 mb-5 reveal-item">
+                        Nuestro equipo te ayuda a implementar InfraTrack en tu operación real para reducir pérdidas,
+                        mejorar mantenimiento y controlar cada unidad con datos confiables.
+                    </p>
+
+                    <div class="info-grid">
+                        <div class="info-box-new reveal-item">
+                            <div class="info-icon-box"><i class="bi bi-geo-alt-fill"></i></div>
+                            <div class="info-text">
+                                <h6>Sede Central</h6>
+                                <p>Av. Javier Prado Este 1110 <br> Lima, Perú - Centro de Operaciones</p>
+                            </div>
+                        </div>
+                        <div class="info-box-new reveal-item">
+                            <div class="info-icon-box"><i class="bi bi-envelope-fill"></i></div>
+                            <div class="info-text">
+                                <h6>Soporte Técnico</h6>
+                                <p>soporte@infratrack.pe <br> contacto@infratrack.pe</p>
+                            </div>
+                        </div>
+                        <div class="info-box-new reveal-item">
+                            <div class="info-icon-box"><i class="bi bi-telephone-fill"></i></div>
+                            <div class="info-text">
+                                <h6>Llámanos</h6>
+                                <p>+51 987 654 321 <br> Anexo: 1202</p>
+                            </div>
+                        </div>
+                        <div class="info-box-new reveal-item">
+                            <div class="info-icon-box"><i class="bi bi-clock-fill"></i></div>
+                            <div class="info-text">
+                                <h6>Horario de Atención</h6>
+                                <p>Lun - Vie: 09:00 - 18:00 <br> Sáb: 09:00 - 13:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="social-title reveal-item">Sigue nuestras redes sociales</p>
+                    <div class="social-links-circle reveal-item">
+                        <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Right Side: Form Card -->
+                <div class="col-lg-6 reveal-right">
+                    <div class="contact-card-white shadow-lg">
+                        <h3 class="fw-bold mb-3">Envíanos un mensaje</h3>
+                        <p class="text-muted mb-4 small">Completa el formulario y un asesor técnico se pondrá en
+                            contacto contigo en menos de 24 horas para evaluar tu operación.</p>
+
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label-new">Nombre</label>
+                                    <input type="text" class="form-control-new w-100" placeholder="Tu nombre">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label-new">Empresa</label>
+                                    <input type="text" class="form-control-new w-100" placeholder="Empresa / obra">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label-new">Teléfono</label>
+                                    <input type="text" class="form-control-new w-100" placeholder="+51 ...">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label-new">Email</label>
+                                    <input type="email" class="form-control-new w-100" placeholder="correo@ejemplo.com">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label class="form-label-new">Asunto</label>
+                                    <input type="text" class="form-control-new w-100"
+                                        placeholder="Control de combustible, GPS o mantenimiento">
+                                </div>
+                                <div class="col-12 mb-4">
+                                    <label class="form-label-new">Mensaje</label>
+                                    <textarea class="form-control-new w-100" rows="4"
+                                        placeholder="Cuéntanos cuántas unidades quieres monitorear y tu reto principal..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn-send-message">ENVIAR MENSAJE <i
+                                            class="bi bi-send ms-2"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Redesigned - Image 2) -->
+    <footer class="footer-dark-new">
+        <div class="container">
+            <!-- Nav Center -->
+            <div class="footer-nav-center">
+                <a href="#inicio">Inicio</a>
+                <a href="#tecnologia">Tecnología</a>
+                <a href="#sectores">Sectores</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#planes">Planes</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <div class="footer-bottom-info row g-4 align-items-center">
+                <!-- Branding -->
+                <div class="col-lg-4">
+                    <div class="footer-logo-box text-center">
+                        <img src="Imagenes/logo_infratrack-sinfondo.png" alt="InfraTrack Logo" height="40" class="mb-2">
+                        <h4 class="fw-bold mb-1">Infra<span class="text-orange">Track</span></h4>
+                        <p class="small mb-0">Monitoreo IoT inteligente para maquinaria pesada y flotas.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Details -->
+                <div class="col-lg-4 text-center">
+                    <div class="footer-contact-details small">
+                        <p class="mb-1"><i class="bi bi-geo-alt text-orange me-2"></i> Av. Javier Prado Este 1110, Lima</p>
+                        <p class="mb-1"><i class="bi bi-telephone text-orange me-2"></i> Llámanos: +51 987 654 321</p>
+                        <p class="mb-0"><i class="bi bi-envelope text-orange me-2"></i> Email:
+                            contacto@infratrack.pe</p>
+                    </div>
+                </div>
+
+                <!-- Subscribe -->
+                <div class="col-lg-4">
+                    <div class="subscribe-box">
+                        <h6 class="text-uppercase letter-spacing-1 mb-3">Recibe insights operativos</h6>
+                        <form class="subscribe-form mb-3">
+                            <input type="email" class="subscribe-input" placeholder="Tu correo electrónico">
+                            <button type="submit" class="subscribe-btn"><i class="bi bi-chevron-right"></i></button>
+                        </form>
+                        <div class="payment-icons justify-content-center">
+                            <img src="https://img.icons8.com/color/48/visa.png" class="payment-badge" alt="Visa">
+                            <img src="https://img.icons8.com/color/48/mastercard.png" class="payment-badge"
+                                alt="Mastercard">
+                            <img src="https://img.icons8.com/color/48/paypal.png" class="payment-badge" alt="Paypal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 pt-4 border-top border-white border-opacity-10 opacity-50 small">
+                <p class="mb-0">&copy; 2026 InfraTrack (UPC). Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
