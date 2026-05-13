@@ -2992,6 +2992,71 @@ footer {
     opacity: 0.75;
 }
 
+.footer-legal-block {
+    color: #1f2937;
+}
+
+.footer-legal-block .footer-legal-link {
+    color: #111827;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    letter-spacing: 0.02em;
+}
+
+.footer-legal-block .footer-legal-link:hover {
+    color: #000000;
+}
+
+/* Página legal (Términos y Condiciones) */
+.terms-legal-page {
+    padding: 120px 0 80px;
+    min-height: 60vh;
+}
+
+.terms-legal-page .terms-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+
+.terms-legal-page .terms-back:hover {
+    color: var(--primary-orange);
+}
+
+.terms-legal-page h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.terms-legal-page .terms-updated {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+}
+
+.terms-legal-page h2 {
+    font-size: 1.15rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary-navy);
+}
+
+.terms-legal-page p,
+.terms-legal-page li {
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 0.75rem;
+}
+
+.terms-legal-page ul {
+    padding-left: 1.25rem;
+}
+
 .section-title {
     text-align: center;
     margin-bottom: 60px;
