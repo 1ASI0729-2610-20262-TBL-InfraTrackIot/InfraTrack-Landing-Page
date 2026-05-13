@@ -100,34 +100,70 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { threshold: 0.3 });
         statsObserver.observe(statsSection);
     }
-    // Typing Animation Logic
-    const typeWriter = (selector, text, i, fnCallback) => {
+    // Typing Animation Logic (idioma vía InfraTrackI18N)
+    let heroAnimGen = 0;
+
+    const typeWriter = (selector, text, i, fnCallback, gen) => {
         const el = document.querySelector(selector);
-        if (!el) return;
-        
+        if (!el || gen !== heroAnimGen) return;
+
         if (i < text.length) {
             el.innerHTML = text.substring(0, i + 1);
-            setTimeout(() => typeWriter(selector, text, i + 1, fnCallback), 25);
-        } else if (typeof fnCallback == 'function') {
-            setTimeout(fnCallback, 400);
+            setTimeout(() => typeWriter(selector, text, i + 1, fnCallback, gen), 25);
+        } else if (typeof fnCallback === 'function') {
+            setTimeout(() => {
+                if (gen === heroAnimGen) fnCallback();
+            }, 400);
         }
     };
 
-    const startHeroAnimation = () => {
-        typeWriter("#typing-tagline", "Monitoreo IoT para flotas", 0, () => {
-            typeWriter("#typing-title", "Controla combustible, ubicación y mantenimiento en tiempo real", 0, () => {
-                typeWriter("#typing-desc", "Digitalizamos operaciones ferreteras y de construcción con telemetría confiable para reducir pérdidas, optimizar rutas y mejorar la rentabilidad.", 0, () => {
-                    const btn = document.getElementById('hero-cta');
-                    if (btn) {
-                        btn.style.opacity = '1';
-                        btn.style.transform = 'translateY(0)';
-                    }
-                });
-            });
+    const resetHeroTyping = () => {
+        ['#typing-tagline', '#typing-title', '#typing-desc'].forEach((sel) => {
+            const el = document.querySelector(sel);
+            if (el) el.innerHTML = '';
+        });
+        const c1 = document.getElementById('hero-cta');
+        const c2 = document.getElementById('hero-cta-login');
+        [c1, c2].forEach((btn) => {
+            if (btn) {
+                btn.style.opacity = '0';
+                btn.style.transform = 'translateY(20px)';
+            }
         });
     };
 
+    const startHeroAnimation = () => {
+        const I18N = window.InfraTrackI18N;
+        if (!I18N) return;
+
+        heroAnimGen += 1;
+        const gen = heroAnimGen;
+        resetHeroTyping();
+
+        const lang = I18N.getLang();
+        const copy = I18N.getHeroCopy(lang);
+
+        typeWriter('#typing-tagline', copy.tagline, 0, () => {
+            typeWriter('#typing-title', copy.title, 0, () => {
+                typeWriter('#typing-desc', copy.desc, 0, () => {
+                    if (gen !== heroAnimGen) return;
+                    ['hero-cta', 'hero-cta-login'].forEach((id) => {
+                        const btn = document.getElementById(id);
+                        if (btn) {
+                            btn.style.opacity = '1';
+                            btn.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, gen);
+            }, gen);
+        }, gen);
+    };
+
     setTimeout(startHeroAnimation, 500);
+
+    window.addEventListener('infratrack:lang', () => {
+        startHeroAnimation();
+    });
 
     // Global Reveal Animation Observer
     const genericObserver = new IntersectionObserver((entries) => {
