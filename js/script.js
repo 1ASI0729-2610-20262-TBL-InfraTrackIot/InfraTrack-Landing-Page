@@ -188,4 +188,35 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reveal-card, .reveal-left, .reveal-right, .reveal-item, .reveal-zoom, .reveal-watermark').forEach(el => {
         genericObserver.observe(el);
     });
+
+    // Video poster -> inline embed on click (replaces poster with iframe)
+    document.querySelectorAll('.video-poster').forEach(poster => {
+        poster.addEventListener('click', () => {
+            const url = poster.getAttribute('data-youtube');
+            if (!url) return;
+            
+            let id = "";
+            if (url.includes("v=")) {
+                id = url.split("v=")[1].split("&")[0];
+            } else if (url.includes("youtu.be/")) {
+                id = url.split("youtu.be/")[1].split("?")[0];
+            } else if (url.includes("embed/")) {
+                id = url.split("embed/")[1].split("?")[0];
+            }
+            
+            if (!id) return;
+
+            const embed = document.createElement('div');
+            embed.className = 'video-embed-inline';
+            embed.innerHTML = `
+                <iframe src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            `;
+
+            poster.replaceWith(embed);
+        });
+
+        poster.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); poster.click(); }
+        });
+    });
 });

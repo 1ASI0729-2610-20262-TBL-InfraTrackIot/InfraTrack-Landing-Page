@@ -158,7 +158,7 @@
             contact_kicker: 'Soporte Especializado',
             contact_title: 'Habla con Expertos',
             contact_intro:
-                'Nuestro equipo te ayuda a implementar InfraTrack en tu operación real para reducir pérdidas, mejorar mantenimiento y controlar cada unidad con datos confiables.',
+                'Nuestra misión es vender soluciones IoT que reducen pérdidas, optimizan rutas y elevan la rentabilidad de tu operación. Empieza con una prueba rápida y ve resultados reales.',
             contact_hq: 'Sede Central',
             contact_hq_p: 'Av. Javier Prado Este 1110 <br> Lima, Perú - Centro de Operaciones',
             contact_sup_h: 'Soporte Técnico',
@@ -168,6 +168,13 @@
             contact_hours_h: 'Horario de Atención',
             contact_hours_p: 'Lun - Vie: 09:00 - 18:00 <br> Sáb: 09:00 - 13:00',
             contact_social: 'Sigue nuestras redes sociales',
+            contact_sales_title: 'Listo para reducir pérdidas y mejorar productividad?',
+            contact_sales_intro: 'InfraTrack entrega telemetría confiable para optimizar combustible, rutas y mantenimiento. Comienza con un piloto rápido y comprueba el impacto en tu operación.',
+            contact_cta_primary: 'Empezar ahora',
+            contact_cta_secondary: 'Agendar demo comercial',
+            contact_benefit_1: 'Instalación y prueba en obra en 2 semanas',
+            contact_benefit_2: 'Onboarding y soporte incluidos',
+            contact_benefit_3: 'Resultados medibles en 30 días',
             form_title: 'Envíanos un mensaje',
             form_intro:
                 'Completa el formulario y un asesor técnico se pondrá en contacto contigo en menos de 24 horas para evaluar tu operación.',
@@ -241,6 +248,14 @@
                 'Para consultas sobre estos términos o el proyecto, puede utilizarse el correo indicado en la sección de contacto de la página principal: <a href="mailto:contacto@infratrack.pe">contacto@infratrack.pe</a>.',
             terms_footer_back: '← Volver al inicio',
             terms_footer_copy: '© 2026 InfraTrack (UPC). Proyecto académico.',
+            video_player_title: 'Video: Sobre InfraTrack',
+            video_player_desc: 'Conoce cómo InfraTrack optimiza flotas y maquinaria pesada.',
+            video_caption_title: 'Video: Sobre InfraTrack',
+            video_caption_desc: 'Mira nuestro video "About the product" para ver la plataforma en acción.',
+            team_video_header: 'Conoce al equipo de RurasqaySoft',
+            team_video_body: 'Profesionales apasionados comprometidos con mejorar el cuidado geriátrico a través de la tecnología.',
+            team_video_title: 'Video: Equipo RurasqaySoft',
+            team_video_desc: 'Nuestro equipo trabajando por el cuidado geriátrico.',
             hero_tagline: 'Monitoreo IoT para flotas',
             hero_title: 'Controla combustible, ubicación y mantenimiento en tiempo real',
             hero_desc:
@@ -399,7 +414,7 @@
             contact_kicker: 'Specialized support',
             contact_title: 'Talk to experts',
             contact_intro:
-                'Our team helps you deploy InfraTrack in your real operation to reduce losses, improve maintenance, and control every unit with reliable data.',
+                'Our mission is to sell IoT solutions that reduce losses, optimize routes and raise the profitability of your operation. Start with a quick pilot and see real results.',
             contact_hq: 'Headquarters',
             contact_hq_p: 'Av. Javier Prado Este 1110 <br> Lima, Peru — Operations center',
             contact_sup_h: 'Technical support',
@@ -409,6 +424,13 @@
             contact_hours_h: 'Business hours',
             contact_hours_p: 'Mon - Fri: 09:00 - 18:00 <br> Sat: 09:00 - 13:00',
             contact_social: 'Follow us on social media',
+            contact_sales_title: 'Ready to reduce losses and improve productivity?',
+            contact_sales_intro: 'InfraTrack delivers reliable telemetry to optimize fuel, routes and maintenance. Start with a quick pilot and verify the impact on your operation.',
+            contact_cta_primary: 'Start now',
+            contact_cta_secondary: 'Book commercial demo',
+            contact_benefit_1: 'Installation and on-site pilot in 2 weeks',
+            contact_benefit_2: 'Onboarding and support included',
+            contact_benefit_3: 'Measurable results in 30 days',
             form_title: 'Send us a message',
             form_intro:
                 'Fill out the form and a technical advisor will contact you within 24 hours to assess your operation.',
@@ -480,6 +502,14 @@
                 'For questions about these terms or the project, you may use the email indicated on the homepage contact section: <a href="mailto:contacto@infratrack.pe">contacto@infratrack.pe</a>.',
             terms_footer_back: '← Back to home',
             terms_footer_copy: '© 2026 InfraTrack (UPC). Academic project.',
+            video_player_title: 'Video: About InfraTrack',
+            video_player_desc: 'Learn how InfraTrack optimizes fleets and heavy machinery.',
+            video_caption_title: 'Video: About InfraTrack',
+            video_caption_desc: 'Watch our "About the product" video to see the platform in action.',
+            team_video_header: 'Meet the RurasqaySoft Team',
+            team_video_body: 'Passionate professionals committed to improving geriatric care through technology.',
+            team_video_title: 'Video: RurasqaySoft Team',
+            team_video_desc: 'Our team working for geriatric care.',
             hero_tagline: 'IoT fleet monitoring',
             hero_title: 'Control fuel, location, and maintenance in real time',
             hero_desc:
@@ -532,6 +562,11 @@
         document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
             const key = el.getAttribute('data-i18n-placeholder');
             if (key && t[key] !== undefined) el.setAttribute('placeholder', t[key]);
+        });
+
+        document.querySelectorAll('[data-i18n-title]').forEach((el) => {
+            const key = el.getAttribute('data-i18n-title');
+            if (key && t[key] !== undefined) el.setAttribute('title', t[key]);
         });
 
         document.querySelectorAll('.lang-switch-btn').forEach((btn) => {

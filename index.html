@@ -66,7 +66,6 @@
                     <span class="lang-switch-dash" aria-hidden="true">-</span>
                     <button type="button" class="lang-switch-btn active" data-set-lang="es" aria-pressed="true">ES</button>
                 </div>
-                <a href="#contacto" class="btn btn-orange-rounded shadow-sm" data-i18n="nav_contact">Contáctanos</a>
             </div>
         </div>
     </nav>
@@ -84,10 +83,6 @@
                     <p id="typing-desc" class="hero-subtitle"></p>
 
                     <div class="d-flex justify-content-center align-items-center flex-wrap gap-3 mt-5 hero-cta-row">
-                        <a href="#contacto" id="hero-cta" class="btn btn-hero"
-                            style="opacity: 0; transform: translateY(20px); transition: all 0.8s ease;">
-                            <i class="bi bi-arrow-down-right-circle"></i> <span data-i18n="hero_cta_contact">Contáctanos</span>
-                        </a>
                         <a href="https://infra-track-frontend-five.vercel.app/login" id="hero-cta-login" class="btn btn-hero btn-hero-outline" target="_blank" rel="noopener noreferrer"
                             style="opacity: 0; transform: translateY(20px); transition: all 0.8s ease;">
                             <i class="bi bi-box-arrow-in-right"></i> <span data-i18n="hero_cta_login">Iniciar sesión</span>
@@ -246,6 +241,27 @@
                 </div>
             </div>
 
+            <!-- Video Feature -->
+            <div class="video-feature-wrapper reveal-item">
+                <div class="video-feature-card">
+                    <div class="video-poster" role="button" tabindex="0" aria-label="Reproducir video"
+                        data-youtube="https://www.youtube.com/watch?v=w0wZfMPeVlM"
+                        data-i18n-title="video_player_title"
+                        data-i18n-desc="video_player_desc"
+                        style="background-image: url('https://img.youtube.com/vi/w0wZfMPeVlM/maxresdefault.jpg');">
+                        <div class="video-overlay">
+                            <div class="video-play-wrap">
+                                <i class="bi bi-play-fill video-play" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-caption text-center">
+                        <h5 class="fw-bold mb-1" data-i18n="video_caption_title">Video: Sobre InfraTrack</h5>
+                        <p class="mb-0" data-i18n="video_caption_desc">Conoce cómo InfraTrack optimiza flotas y reduce pérdidas.</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- InfraTrack Operations Showcase -->
             <div class="ops-showcase-panel reveal-item">
                 <div class="ops-showcase-header">
@@ -256,7 +272,7 @@
 
                 <div class="row g-3 align-items-start mt-1">
                     <div class="col-12 col-xl-7">
-                        <p class="ops-subtitle"><span>1</span> <span data-i18n="ops_s1">Indicadores de hoy</span></p>
+                        <p class="ops-subtitle"><span class="ops-num">1</span> <span data-i18n="ops_s1">Indicadores de hoy</span></p>
                         <div class="ops-kpi-grid">
                             <article class="ops-kpi-card kpi-fuel">
                                 <span class="ops-kpi-icon icon-fuel"><i class="bi bi-fuel-pump-fill"></i></span>
@@ -314,7 +330,7 @@
                     </div>
 
                     <div class="col-12 col-xl-5">
-                        <p class="ops-subtitle"><span>2</span> <span data-i18n="ops_s2">Alertas de hoy</span></p>
+                        <p class="ops-subtitle"><span class="ops-num">2</span> <span data-i18n="ops_s2">Alertas de hoy</span></p>
                         <div class="ops-side-card mb-3">
                             <h5 class="ops-side-title"><i class="bi bi-lightning-charge-fill me-2"></i><span data-i18n="ops_ev_title">Eventos recientes</span></h5>
                             <ul class="ops-event-list">
@@ -353,7 +369,7 @@
                 </div>
 
                 <div class="ops-daily-summary">
-                    <p class="ops-subtitle ops-subtitle-bottom"><span>3</span> <span data-i18n="ops_s3">Resultado del día</span></p>
+                    <p class="ops-subtitle ops-subtitle-bottom"><span class="ops-num">3</span> <span data-i18n="ops_s3">Resultado del día</span></p>
                     <div class="ops-impact-row">
                         <div class="ops-impact-pill">
                             <i class="bi bi-activity"></i>
@@ -562,8 +578,29 @@
                 <div class="team-techtitans-rule reveal-item" aria-hidden="true"></div>
             </header>
 
+            <!-- Video del Equipo (RurasqaySoft) -->
+            <div class="video-feature-wrapper reveal-item mb-5">
+                <div class="video-feature-card mx-auto">
+                    <div class="video-poster" role="button" tabindex="0" aria-label="Reproducir video de presentación"
+                        data-youtube="https://www.youtube.com/watch?v=w0wZfMPeVlM"
+                        data-i18n-title="team_video_title"
+                        data-i18n-desc="team_video_desc"
+                        style="background-image: url('https://img.youtube.com/vi/w0wZfMPeVlM/maxresdefault.jpg');">
+                        <div class="video-overlay">
+                            <div class="video-play-wrap">
+                                <i class="bi bi-play-fill video-play" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-caption text-center">
+                        <h5 class="fw-bold mb-1" data-i18n="team_video_header">Conoce al equipo de RurasqaySoft</h5>
+                        <p class="mb-0" data-i18n="team_video_body">Profesionales apasionados comprometidos con mejorar el cuidado geriátrico a través de la tecnología.</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="row g-4 justify-content-center team-techtitans-row-top">
-                <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+                <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center">
                     <article class="team-member-card team-member-card--featured reveal-item">
                         <div class="team-member-frame">
                             <div class="team-member-photo">
@@ -574,7 +611,8 @@
                         <div class="team-member-accent-bar" aria-hidden="true"></div>
                     </article>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+
+                <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center">
                     <article class="team-member-card team-member-card--featured reveal-item">
                         <div class="team-member-frame">
                             <div class="team-member-photo">
@@ -585,7 +623,8 @@
                         <div class="team-member-accent-bar" aria-hidden="true"></div>
                     </article>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-4 d-flex justify-content-center">
+
+                <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center">
                     <article class="team-member-card team-member-card--featured reveal-item">
                         <div class="team-member-frame">
                             <div class="team-member-photo">
@@ -596,10 +635,8 @@
                         <div class="team-member-accent-bar" aria-hidden="true"></div>
                     </article>
                 </div>
-            </div>
 
-            <div class="row g-4 justify-content-center team-techtitans-row-bottom">
-                <div class="col-12 col-sm-6 col-lg-5 d-flex justify-content-center">
+                <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center">
                     <article class="team-member-card team-member-card--featured reveal-item">
                         <div class="team-member-frame">
                             <div class="team-member-photo">
@@ -610,14 +647,16 @@
                         <div class="team-member-accent-bar" aria-hidden="true"></div>
                     </article>
                 </div>
-                <div class="col-12 col-sm-6 col-lg-5 d-flex justify-content-center">
+
+                <div class="col-6 col-sm-4 col-md-2 d-flex justify-content-center">
                     <article class="team-member-card team-member-card--featured reveal-item">
                         <div class="team-member-frame">
                             <div class="team-member-photo">
-                                <img src="Imagenes/WhatsApp Image 2026-04-19 at 8.10.07 PM.jpeg"
-                                    alt="CARLOS MARCELO MANSILLA RIVERO">
+                                <div class="team-member-photo-placeholder d-flex align-items-center justify-content-center bg-light text-muted">
+                                    <i class="bi bi-person-fill" style="font-size: 2rem;"></i>
+                                </div>
                             </div>
-                            <h3 class="team-member-name">CARLOS MARCELO MANSILLA RIVERO</h3>
+                            <h3 class="team-member-name">MANUEL</h3>
                         </div>
                         <div class="team-member-accent-bar" aria-hidden="true"></div>
                     </article>
@@ -729,12 +768,12 @@
             <div class="row align-items-center g-5">
                 <!-- Left Side: Info -->
                 <div class="col-lg-6 reveal-left">
-                    <span class="text-orange fw-bold text-uppercase letter-spacing-2 reveal-item" data-i18n="contact_kicker">Soporte Especializado</span>
-                    <h2 class="display-5 fw-bold mt-2 reveal-item" data-i18n="contact_title">Habla con Expertos</h2>
-                    <p class="text-muted mt-3 mb-5 reveal-item" data-i18n="contact_intro">
-                        Nuestro equipo te ayuda a implementar InfraTrack en tu operación real para reducir pérdidas,
-                        mejorar mantenimiento y controlar cada unidad con datos confiables.
+                    <span class="text-orange fw-bold text-uppercase letter-spacing-2 reveal-item" data-i18n="contact_kicker">Nuestra misión</span>
+                    <h2 class="display-5 fw-bold mt-2 reveal-item" data-i18n="contact_title">Comienza a optimizar tu flota hoy</h2>
+                    <p class="text-muted mt-3 mb-3 reveal-item" data-i18n="contact_intro">
                     </p>
+
+                    
 
                     <div class="info-grid">
                         <div class="info-box-new reveal-item">
@@ -776,47 +815,22 @@
                     </div>
                 </div>
 
-                <!-- Right Side: Form Card -->
+                <!-- Right Side: Sales Panel (replaces form) -->
                 <div class="col-lg-6 reveal-right">
-                    <div class="contact-card-white shadow-lg">
-                        <h3 class="fw-bold mb-3" data-i18n="form_title">Envíanos un mensaje</h3>
-                        <p class="text-muted mb-4 small" data-i18n="form_intro">Completa el formulario y un asesor técnico se pondrá en
-                            contacto contigo en menos de 24 horas para evaluar tu operación.</p>
+                    <div class="contact-card-white shadow-lg contact-sales-card">
+                        <h3 class="fw-bold mb-3" data-i18n="contact_sales_title">Listo para reducir pérdidas y mejorar productividad?</h3>
+                        <p class="text-muted mb-3 small" data-i18n="contact_sales_intro"></p>
 
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label-new" data-i18n="form_name">Nombre</label>
-                                    <input type="text" class="form-control-new w-100" data-i18n-placeholder="ph_name" placeholder="Tu nombre">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label-new" data-i18n="form_company">Empresa</label>
-                                    <input type="text" class="form-control-new w-100" data-i18n-placeholder="ph_company" placeholder="Empresa / obra">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label-new" data-i18n="form_phone">Teléfono</label>
-                                    <input type="text" class="form-control-new w-100" data-i18n-placeholder="ph_phone" placeholder="+51 ...">
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label class="form-label-new" data-i18n="form_email">Email</label>
-                                    <input type="email" class="form-control-new w-100" data-i18n-placeholder="ph_email" placeholder="correo@ejemplo.com">
-                                </div>
-                                <div class="col-12 mb-3">
-                                    <label class="form-label-new" data-i18n="form_subject">Asunto</label>
-                                    <input type="text" class="form-control-new w-100"
-                                        data-i18n-placeholder="ph_subject" placeholder="Control de combustible, GPS o mantenimiento">
-                                </div>
-                                <div class="col-12 mb-4">
-                                    <label class="form-label-new" data-i18n="form_message">Mensaje</label>
-                                    <textarea class="form-control-new w-100" rows="4"
-                                        data-i18n-placeholder="ph_message" placeholder="Cuéntanos cuántas unidades quieres monitorear y tu reto principal..."></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn-send-message"><span data-i18n="form_send">ENVIAR MENSAJE</span> <i
-                                            class="bi bi-send ms-2"></i></button>
-                                </div>
-                            </div>
-                        </form>
+                        <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+                            <a href="https://infra-track-frontend-five.vercel.app/login" class="btn btn-cta-primary" data-i18n="contact_cta_primary">Empezar ahora</a>
+                            <a href="mailto:contacto@infratrack.pe?subject=Agendar%20Demo%20Comercial" class="btn btn-cta-outline" data-i18n="contact_cta_secondary">Agendar demo comercial</a>
+                        </div>
+
+                        <ul class="mt-4 small text-muted contact-sales-benefits">
+                            <li data-i18n="contact_benefit_1"></li>
+                            <li data-i18n="contact_benefit_2"></li>
+                            <li data-i18n="contact_benefit_3"></li>
+                        </ul>
                     </div>
                 </div>
             </div>

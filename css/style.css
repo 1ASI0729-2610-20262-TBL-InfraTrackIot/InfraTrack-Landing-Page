@@ -1382,16 +1382,16 @@ footer {
     margin: 4px 0 10px;
 }
 
-.ops-subtitle span {
-    width: 20px;
-    height: 20px;
+.ops-subtitle .ops-num {
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background: rgba(202, 138, 4, 0.14);
     color: #a16207;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.68rem;
+    font-size: 0.78rem;
     font-weight: 900;
 }
 
@@ -1715,6 +1715,164 @@ footer {
     gap: 8px;
     margin-top: 8px;
 }
+/* --- VIDEO FEATURE PLACEHOLDER --- */
+.video-feature-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem 0 1.5rem;
+}
+.video-feature-card {
+    width: 100%;
+    max-width: 920px;
+}
+.video-poster {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(2,6,23,0.06), rgba(2,6,23,0.02));
+    box-shadow: 0 18px 40px rgba(2,6,23,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+.video-poster { background-size: cover; background-position: center; }
+.video-poster::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.06));
+}
+.video-overlay {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.video-play {
+    font-size: 64px;
+    color: #fff;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 0 8px 24px rgba(2,6,23,0.28);
+}
+.video-poster:focus .video-play,
+.video-poster:hover .video-play {
+    transform: scale(1.02);
+}
+.video-caption code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; font-size: .85em; }
+
+.video-caption {
+    background: white;
+    padding: 24px 30px;
+    border-radius: 0 0 16px 16px;
+    border: 1px solid #e2e8f0;
+    border-top: none;
+    margin-top: -10px; /* Une el texto al video */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    position: relative;
+    z-index: 1;
+}
+
+/* Línea naranja interna similar a la imagen de referencia */
+.video-caption::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 1px solid rgba(244, 194, 13, 0.45);
+    border-radius: 12px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.video-caption h5 {
+    color: var(--primary-navy);
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.video-caption h5::after {
+    display: none; /* Quitamos la línea central para que no compita con el borde interno */
+}
+
+.video-caption p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 8px auto 0 !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* Ajuste para que el video no tenga bordes inferiores redondeados si hay caption */
+.video-poster, .video-embed-inline {
+    border-radius: 16px 16px 0 0;
+}
+
+/* Inline embed that replaces the poster */
+.video-embed-inline {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(2,6,23,0.08);
+}
+.video-embed-inline iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* Video modal */
+.video-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(2,6,23,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+}
+.video-modal {
+    width: 90%;
+    max-width: 1100px;
+    background: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(2,6,23,0.6);
+    position: relative;
+}
+.video-modal iframe {
+    width: 100%;
+    height: calc(100vw * 9 / 16);
+    max-height: 75vh;
+    display: block;
+}
+.video-modal-close {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: #111827;
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(2,6,23,0.4);
+}
 
 .ops-impact-pill {
     background: #ffffff;
@@ -1873,10 +2031,10 @@ footer {
         margin-bottom: 8px;
     }
 
-    #tecnologia .ops-subtitle span {
-        width: 17px;
-        height: 17px;
-        font-size: 0.58rem;
+    #tecnologia .ops-subtitle .ops-num {
+        width: 20px;
+        height: 20px;
+        font-size: 0.6rem;
     }
 
     #tecnologia .ops-kpi-grid {
@@ -2488,7 +2646,7 @@ footer {
 .team-member-card--featured {
     width: 100%;
     flex-shrink: 0;
-    max-width: 360px;
+    max-width: none;
 }
 
 .team-member-card--featured .team-member-frame {
@@ -2500,9 +2658,16 @@ footer {
     font-size: 0.74rem;
 }
 
+.team-member-photo-placeholder {
+    width: 100%;
+    height: 100%;
+    background: #f3f4f6;
+    color: #9ca3af;
+}
+
 @media (min-width: 992px) {
     .team-member-card--featured {
-        max-width: 392px;
+        max-width: 200px; /* Reducido para que entren 5 en fila */
     }
 
     .team-techtitans-row-bottom {
@@ -2526,6 +2691,8 @@ footer {
 }
 
 .pricing-card-white {
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(2,6,23,0.12);
     background: white;
     padding: 40px 30px;
     border-radius: 20px;
@@ -2945,6 +3112,58 @@ footer {
     background: #d4a805;
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(244, 194, 13, 0.35);
+}
+
+/* CTA buttons for contact sales focus */
+.btn-cta-primary {
+    background: var(--primary-orange);
+    color: #081126;
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-weight: 800;
+    text-transform: none;
+    box-shadow: 0 12px 30px rgba(2,6,23,0.08);
+    border: none;
+}
+.btn-cta-primary:hover {
+    background: #d4a805;
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(2,6,23,0.12);
+}
+
+.btn-cta-outline {
+    background: transparent;
+    color: #111827;
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 2px solid rgba(17,24,39,0.06);
+    font-weight: 700;
+}
+.btn-cta-outline:hover {
+    background: rgba(17,24,39,0.02);
+}
+
+/* Sales panel specifics */
+.contact-sales-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px;
+}
+.contact-sales-card h3 {
+    font-size: 1.6rem;
+    color: #081126;
+}
+.contact-sales-card p {
+    color: #475569;
+}
+.contact-sales-benefits {
+    margin-left: 1rem;
+    padding-left: 1rem;
+}
+.contact-sales-benefits li {
+    margin-bottom: 0.5rem;
+    list-style: disc;
 }
 
 /* --- NEW FOOTER (IMAGE 2) --- */
@@ -3652,3 +3871,32 @@ footer {
         margin-top: 4px;
     }
 }
+
+/* Play button refinement + hover */
+.video-poster { transition: transform 0.28s ease, box-shadow 0.28s ease; }
+.video-play-wrap {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(244,194,13,0.98), rgba(242,137,17,0.98));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 18px 40px rgba(2,6,23,0.25);
+    transform: scale(1);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.video-play { font-size: 34px; color: #081126; }
+.video-poster:hover { transform: translateY(-6px); box-shadow: 0 28px 70px rgba(2,6,23,0.14); }
+.video-poster:hover .video-play-wrap { transform: scale(1.06); box-shadow: 0 28px 70px rgba(2,6,23,0.28); }
+
+/* Modal header inside video modal */
+.video-modal-header {
+    padding: 18px 22px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.96));
+    color: #081126;
+}
+.video-modal-header h4 { margin: 0 0 6px; font-size: 1.15rem; }
+.video-modal-header p { margin: 0; color: #475569; font-size: 0.95rem; }
+.video-modal .video-embed { background: #000; }
+.video-modal iframe { height: 56vw; max-height: 62vh; }
