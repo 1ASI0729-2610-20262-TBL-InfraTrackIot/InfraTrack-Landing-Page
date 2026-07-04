@@ -190,29 +190,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Video poster -> inline embed on click (replaces poster with iframe)
+    function getYouTubeId(url) {
+        if (!url) return '';
+        if (url.includes('v=')) return url.split('v=')[1].split('&')[0];
+        if (url.includes('youtu.be/')) return url.split('youtu.be/')[1].split('?')[0];
+        if (url.includes('embed/')) return url.split('embed/')[1].split('?')[0];
+        return '';
+    }
+
+    function buildYouTubeEmbedUrl(id) {
+        const params = new URLSearchParams({
+            autoplay: '1',
+            rel: '0',
+            playsinline: '1',
+            modestbranding: '1',
+        });
+
+        return `https://www.youtube.com/embed/${id}?${params.toString()}`;
+    }
+
+    function createYouTubeEmbed(id) {
+        const embed = document.createElement('div');
+        embed.className = 'video-embed-inline';
+
+        const iframe = document.createElement('iframe');
+        iframe.src = buildYouTubeEmbedUrl(id);
+        iframe.title = 'YouTube video player';
+        iframe.setAttribute('frameborder', '0');
+        iframe.setAttribute(
+            'allow',
+            'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+        );
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+
+        embed.appendChild(iframe);
+        return embed;
+    }
+
     document.querySelectorAll('.video-poster').forEach(poster => {
         poster.addEventListener('click', () => {
             const url = poster.getAttribute('data-youtube');
-            if (!url) return;
-            
-            let id = "";
-            if (url.includes("v=")) {
-                id = url.split("v=")[1].split("&")[0];
-            } else if (url.includes("youtu.be/")) {
-                id = url.split("youtu.be/")[1].split("?")[0];
-            } else if (url.includes("embed/")) {
-                id = url.split("embed/")[1].split("?")[0];
-            }
-            
+            const id = getYouTubeId(url);
             if (!id) return;
 
-            const embed = document.createElement('div');
-            embed.className = 'video-embed-inline';
-            embed.innerHTML = `
-                <iframe src="https://www.youtube.com/embed/${id}?autoplay=1&rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            `;
-
-            poster.replaceWith(embed);
+            poster.replaceWith(createYouTubeEmbed(id));
         });
 
         poster.addEventListener('keydown', (e) => {
